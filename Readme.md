@@ -62,3 +62,5 @@ The script uses multithreading to speed up the extraction process. The maximum n
 ### **Execution Time**
 
 The script measures the execution time and prints it to the console upon completion. The execution time includes the time taken to read the CSV file, extract the geolocation data, and write it to a CSV file.
+
+Documentation link : https://docs.google.com/document/d/1z5CDXHyrj0ab6Sap1lTG_-VJH4DpYFZ_RXqbtvJTrYw/edit#
