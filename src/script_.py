@@ -22,7 +22,23 @@ mobile_number = '9425820438'
 submit = 'Trace'
 
 # reading phone number details
-df_phone_num = pd.read_csv('./kfy_data_addition.csv')
+df_phone_num = pd.read_csv('/Users/akivirus/Desktop/Project/findandtrace/csv_data/zoho_crm_data_cleanup_validate.csv')
+# df_phone_num = df_phone_num.loc[0:199999]
+# df_phone_num = df_phone_num.loc[200000:399999]
+# df_phone_num = df_phone_num.loc[400000:]
+
+# df_1 = pd.read_csv('./data_addition_ao_3_may.csv', header=None)
+# df_2 = pd.read_csv('./data_addition_ao_3_may_1.csv', header=None)
+# df_3 = pd.read_csv('./data_addition_ao_3_may_2.csv', header=None)
+# df_4 = pd.read_csv('./data_addition_ao_3_may_3.csv', header=None)
+# df_5 = pd.read_csv('./data_addition_ao_3_may_4.csv', header=None)
+# df_6 = pd.read_csv('./data_addition_ao_3_may_5.csv', header=None)
+
+# df_old = pd.concat([df_1,df_2,df_3,df_4,df_5,df_6])
+
+# df_old = pd.read_csv('./data_addition_ao_3_may_4.csv', header=None)
+
+# df_phone_num = df_phone_num[~(df_phone_num.phone_num.isin(df_old[0].to_list()))]
 
 phone_num_list = list(set(df_phone_num.phone_num.to_list()))
 
@@ -86,7 +102,7 @@ def fetch(session, phone_num):
     # print(str_)
     # counter_ = counter_ + 1
     try:
-        with open('data_addition.csv', 'a') as file: 
+        with open('data_addition_ao_3_may_validate.csv', 'a') as file: 
             # writing data into a data addition csv file
             file.write(str_)
             file.close()
